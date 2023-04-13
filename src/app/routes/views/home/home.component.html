@@ -1,0 +1,11 @@
+<app-header 
+    [totalIncome]="getTotalIncome()"
+    [totalExpenses]="getTotalExpenses()"
+    [totalBudget]="getTotalBudget()"
+    [totalPercentage]="getTotalBudgetPercentage()" />
+<app-form></app-form>
+<div class="contenedor limpiarEstilos">
+    <app-income></app-income>
+    <app-expenses></app-expenses>
+</div>
+<app-footer></app-footer>

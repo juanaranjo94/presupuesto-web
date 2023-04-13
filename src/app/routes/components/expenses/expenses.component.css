@@ -1,0 +1,24 @@
+.egreso .elemento_valor,
+.egreso .elemento_porcentaje,
+.egreso .elemento_eliminar--btn {
+color: #FF5049;
+}
+
+.egreso_titulo {
+color: #FF5049;
+}
+
+.egreso {
+float: left;
+width: 475px;
+}
+
+h2 {
+text-transform: uppercase;
+font-size: 18px;
+font-weight: 400;
+margin-bottom: 15px;
+}
+
+
+

@@ -1,0 +1,17 @@
+
+.ingreso {
+  float: left;
+  width: 475px;
+  margin-right: 50px;
+}
+
+.ingreso_titulo {
+  color: #28B9B5;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}

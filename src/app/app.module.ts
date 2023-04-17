@@ -12,6 +12,7 @@ import { FooterComponent } from './routes/components/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './shared/angular-material.module';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -28,9 +29,11 @@ import { AngularMaterialModule } from './shared/angular-material.module';
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
-  providers: [],
+  providers: [provideNgxMask()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

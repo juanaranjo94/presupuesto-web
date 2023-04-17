@@ -18,6 +18,11 @@
   background: url(assets/bg-pattern.png), linear-gradient(to left, #7b4397, #dc2430)
 }
 
+.ingreso .elemento_valor,
+.ingreso .elemento_eliminar--btn {
+  color: #28B9B5;
+}
+
 .limpiarEstilos::after {
   content: "";
   display: table;
@@ -40,6 +45,8 @@ body {
 .red {
   color: #FF5049 !important;
 }
+
+.red-border { border: 1px solid #FF5049 !important}
 
 .redfocus:focus {
   border: 1px solid #FF5049 !important;
@@ -138,8 +145,7 @@ body {
   font-weight: 900;
   }
   
-
-
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+

@@ -45,6 +45,6 @@ export class HomeComponent {
     }
 
     getTotalBudgetPercentage(): number {
-      return (this.getTotalBudget() / this.getTotalIncome()) * 100;
+      return (this.getTotalBudget() / this.getTotalIncome());
     }
 }

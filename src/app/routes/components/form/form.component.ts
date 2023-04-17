@@ -11,6 +11,7 @@ import { Concept } from '../../../core/models/concept';
 export class FormComponent {
 
 formBudget!: FormGroup;
+redBorder: boolean = false;
 concept!: Concept;
 operation = [
   {
@@ -29,10 +30,16 @@ constructor(private _fb: FormBuilder, private _budgetSvc: BudgetService) {
 
 private initForm(): void {
   this.formBudget = this._fb.group({
-    operation: ['ing', [Validators.required]],
+    operation: ['', [Validators.required]],
     description: ['', [Validators.required, Validators.minLength(3)]],
-    value: ['400', [Validators.required, Validators.min(0)]]
+    value: ['', [Validators.required, Validators.min(0)]]
   });
+
+  this.formBudget.get('operation')?.valueChanges.subscribe((value) => {
+    return (this.redBorder = value !== 'ing');
+    console.log('operation: ', value);
+    
+  })
 }
 
 send(){
@@ -54,6 +61,8 @@ send(){
 
   // Reset form
   this.formBudget.reset();
+  // Inicializar all operations in income (+)
+  this.formBudget.patchValue({operation: 'ing'});
 }
 
 

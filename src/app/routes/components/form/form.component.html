@@ -3,11 +3,11 @@
 <form [formGroup]="formBudget" (ngSubmit)="send()">
     <div class="agregar">
       <div class="agregar_contenedor">
-        <select formControlName="operation" class="agregar_tipo">
+        <select [ngClass]="{'red-border' : redBorder}" formControlName="operation" class="agregar_tipo">
           <option  *ngFor="let operation of operation" [value]="operation.abbreviation" selected>{{operation.sign}}</option>
         </select>
         <input formControlName="description" type="text" class="agregar_descripcion" placeholder="Agregar Descripción">
-        <input formControlName="value" type="number" class="agregar_valor" placeholder="Valor">
+        <input formControlName="value" type="text" class="agregar_valor" placeholder="Valor" mask="separator" thousandSeparator=".">
         <button type="submit" class="agregar_btn">
           <mat-icon>check_circle_outline</mat-icon>
         </button>

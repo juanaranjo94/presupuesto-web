@@ -35,6 +35,7 @@ private initForm(): void {
     value: ['', [Validators.required, Validators.min(0)]]
   });
 
+  // Agrega la clase red-border cuando esta NO es  un expenses
   this.formBudget.get('operation')?.valueChanges.subscribe((value) => {
     return (this.redBorder = value !== 'ing');
     console.log('operation: ', value);
